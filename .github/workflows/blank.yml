@@ -8,21 +8,21 @@ jobs:
         run: |
           echo "this is my second line"
           echo "this is my third line"
-    Build:
-      runs-on: ubuntu-latest
-      steps:
-        - name: buid step
-          run: echo "this is a build step"
-    Test:
-      runs-on: ubuntu-latest
-      steps:
-        - name: test step
-          run: echo "this is a test cases"
-    Deploy:
-      runs-on: ubuntu-latest
-      steps:
-        - name: deploy stage
-          run: echo "deploying the code to dev environment"
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: buid step
+        run: echo "this is a build step"
+  Test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test step
+        run: echo "this is a test cases"
+  Deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy stage
+        run: echo "deploying the code to dev environment"
             
         
 
