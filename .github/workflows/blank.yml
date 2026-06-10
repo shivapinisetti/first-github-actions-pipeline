@@ -5,7 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: hello-step
-        run: echo "this is my first-commit"
+        run: |
+          echo "this is my second line"
+          echo "this is my third line"
+        
 
 
 
