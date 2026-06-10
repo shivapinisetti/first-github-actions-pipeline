@@ -10,11 +10,13 @@ jobs:
           echo "this is my third line"
   Build:
     runs-on: ubuntu-latest
+    needs: hello   ## it will execute if hello job is success.. or its not execute.
     steps:
       - name: buid step
         run: echo "this is a build step"
   Test:
     runs-on: ubuntu-latest
+    needs: Build
     steps:
       - name: test step
         run: echo "this is a test cases"
