@@ -22,6 +22,7 @@ jobs:
         run: echo "this is a test cases"
   Deploy:
     runs-on: ubuntu-latest
+    needs: Test
     steps:
       - name: deploy stage
         run: echo "deploying the code to dev environment"
