@@ -14,8 +14,7 @@ jobs:
     steps:
       - name: hello-step
         run: |
-          echo "this is my second line"
-          echo "this is my third line"
+          echo "Hello, ${{ vars.MY_NAME }}"
   Build:
     runs-on: ubuntu-latest
     needs: hello   ## it will execute if hello job is success.. or its not execute.
