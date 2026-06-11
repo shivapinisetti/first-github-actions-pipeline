@@ -16,6 +16,11 @@ jobs:
         run: |
           echo "Hello, ${{ vars.MY_NAME }}"
           echo " the secrets values is ${{ secrets.MY_SECRET }}"
+      - name: checkout the code
+        uses: actions/checkout@v4
+      - name: print the index.html file
+        run: cat index.html
+          
   Build:
     runs-on: ubuntu-latest
     needs: hello   ## it will execute if hello job is success.. or its not execute.
