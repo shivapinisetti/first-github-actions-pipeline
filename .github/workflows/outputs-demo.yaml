@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: deploy job
-      run: echo "deploying the application on ${{ needs.outputs-job.steps.version }}"
+      run: echo "deploying the application on ${{ needs.outputs-job.outputs.version }}"
   
      
   
