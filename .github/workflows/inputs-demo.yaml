@@ -11,13 +11,13 @@ on:
           - dev
           - test
           - prod
-        artifact_tag:
-          description: choose the git tag to deploy
-          required: true
+      artifact_tag:
+        description: choose the git tag to deploy
+        required: true
 jobs:
   inputs-demo:
     runs-on: ubuntu-latest
-    steps: Deploy the code
+    steps: 
       - name: Deploy the app
         run: echo "Deploying the ${{ inputs.artifact_tag }} application to ${{ inputs.environment }}"
         
