@@ -1,0 +1,20 @@
+name: outputs-callout
+on: push    
+jobs:
+  outputs-job:
+    outputs:
+      version: ${{ steps.step1.outputs.version }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: build job
+        id: step1
+        run: echo "version=0.0.1" >> GITHUB_OUTPUT
+ Deploy-job:
+   needs: outputs-job
+   runs-on: ubuntu-latest
+  steps:
+    - name: deploy job
+      run: echo "deploying the application on ${{ needs.outputs-job.steps.version }}"
+  
+     
+  
