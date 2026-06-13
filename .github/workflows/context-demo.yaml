@@ -1,0 +1,9 @@
+name: context-workflow
+on: push
+jobs:
+  context-demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checking the workfloe triggerby.. who and repo name
+        run: |
+          echo "this is trigger by ${{ github.actor }} and the repo name is ${{ github.repository }}"
