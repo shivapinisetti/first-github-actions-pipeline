@@ -1,0 +1,14 @@
+name: if demo
+on: push
+jobs:
+  ifdemo-job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: this is triiger by wehn it is main branch
+      if: github.ref_name == 'main' || github.actor == 'shivapinisetti'
+      run: echo "triggenr this job because the commait is done "
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy job
+        run: deploying this to main
