@@ -9,10 +9,10 @@ jobs:
       - name: build job
         id: step1
         run: echo "version=0.0.1" >> GITHUB_OUTPUT
- Deploy-job:
-   needs: outputs-job
-   runs-on: ubuntu-latest
-  steps:
+  Deploy-job:
+    needs: outputs-job
+    runs-on: ubuntu-latest
+    steps:
     - name: deploy job
       run: echo "deploying the application on ${{ needs.outputs-job.steps.version }}"
   
