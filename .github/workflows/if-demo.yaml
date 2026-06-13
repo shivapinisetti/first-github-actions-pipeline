@@ -10,5 +10,5 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: deploy job
-        run: deploying this to main
+    - name: deploy job
+      run: deploying this to main
